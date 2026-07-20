@@ -1,0 +1,62 @@
+image_root: './dataset/flickr30k/images/'
+ann_root: './dataset/flickr30k/'
+
+#sensitive_train: 'dbi.json'
+#sensitive_train: 'edu.json'
+#sensitive_train: 'fi.json'
+#sensitive_train: 'idc.json'
+#sensitive_train: 'mi.json'
+sensitive_train: 'resume.json'
+#sensitive_val: 'dbi_val.json'
+#sensitive_val: 'edu_val.json'
+#sensitive_val: 'fi_val.json'
+#sensitive_val: 'idc_val.json'
+#sensitive_val: 'mi_val.json'
+sensitive_val: 'resume_val.json'
+#sensitive_val_gt: 'dbi_val_gt.json'
+#sensitive_val_gt: 'edu_val_gt.json'
+#sensitive_val_gt: 'fi_val_gt.json'
+#sensitive_val_gt: 'idc_val_gt.json'
+#sensitive_val_gt: 'mi_val_gt.json'
+sensitive_val_gt: 'resume_val_gt.json'
+
+remain_dismatch: 'remain_data_dismatch.json'
+remain_match: 'remain_data_match.json'
+
+remain_val: 'flickr30k_remain_val.json'
+remain_val_gt: 'flickr30k_remain_val_gt.json'
+
+# set pretrained as a file path or an url
+#pretrained: './output/Caption_flickr_sensitive_dbi/checkpoint_best.pth'
+#pretrained: './output/Caption_flickr_sensitive_edu/checkpoint_best.pth'
+#pretrained: './output/Caption_flickr_sensitive_fi/checkpoint_best.pth'
+#pretrained: './output/Caption_flickr_sensitive_idc/checkpoint_best.pth'
+#pretrained: './output/Caption_flickr_sensitive_mi/checkpoint_best.pth'
+pretrained: './output/Caption_flickr_sensitive_resume/checkpoint_best.pth'
+
+# size of vit model; base or large
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+batch_size: 16
+init_lr: 1e-5
+
+# vit: 'large'
+# vit_grad_ckpt: True
+# vit_ckpt_layer: 5
+# batch_size: 16
+# init_lr: 2e-6
+
+image_size: 384
+
+# generation configs
+max_length: 35
+min_length: 5
+num_beams: 3
+prompt: 'a picture of '
+
+# optimizer
+weight_decay: 0.05
+min_lr: 0
+max_epoch: 5
+

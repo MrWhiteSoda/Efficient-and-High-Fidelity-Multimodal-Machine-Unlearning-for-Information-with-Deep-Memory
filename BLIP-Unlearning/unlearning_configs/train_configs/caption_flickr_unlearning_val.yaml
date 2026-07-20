@@ -1,0 +1,39 @@
+image_root: './dataset/flickr30k/flickr30k-images/'
+ann_root: './dataset/flickr30k/mmu/'
+flickr_gt_root: './dataset/flickr30k/mmu/'
+unlearning_val_1k: 'unlearning_data_val_1k.json'
+unlearning_val_1k_gt: 'unlearning_data_val_gt_1k.json'
+unlearning_val_2k: 'unlearning_data_val_2k.json'
+unlearning_val_2k_gt: 'unlearning_data_val_gt_2k.json'
+unlearning_val_3k: 'unlearning_data_val_3k.json'
+unlearning_val_3k_gt: 'unlearning_data_val_gt_3k.json'
+unlearning_val_4k: 'unlearning_data_val_4k.json'
+unlearning_val_4k_gt: 'unlearning_data_val_gt_4k.json'
+unlearning_val_5k: 'unlearning_data_val_5k.json'
+unlearning_val_5k_gt: 'unlearning_data_val_gt_5k.json'
+
+# set pretrained as a file path or an url
+pretrained: './output/Caption_flickr/checkpoint_best.pth'
+
+# size of vit model; base or large
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+batch_size: 32
+init_lr: 1e-5
+
+
+
+image_size: 384
+
+# generation configs
+max_length: 20  
+min_length: 5
+num_beams: 3
+prompt: 'a picture of '
+
+# optimizer
+weight_decay: 0.05
+min_lr: 0
+max_epoch: 5
+

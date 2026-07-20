@@ -1,0 +1,42 @@
+image_root: './dataset/coco2014/caption_images/'
+ann_root: './dataset/coco2014/'
+coco_gt_root: './dataset/coco2014/'
+
+finetune_train: 'coco_karpathy_sensitive_retrain.json'
+
+sensitive_val: 'resume_val.json'
+
+sensitive_val_gt: 'resume_val_gt.json'
+
+val: 'coco_karpathy_val.json'
+val_gt: 'coco_karpathy_val_gt.json'
+test: 'coco_karpathy_test.json'
+test_gt: 'coco_karpathy_test_gt.json'
+remain_val: 'coco_karpathy_remain_val.json'
+remain_val_gt: 'coco_karpathy_remain_val_gt.json'
+
+
+pretrained: './output/Caption_coco_sensitive_resume/checkpoint_best.pth'
+
+# size of vit model; base or large
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+batch_size: 16
+init_lr: 2e-5
+
+
+
+image_size: 384
+
+# generation configs
+max_length: 35
+min_length: 5
+num_beams: 3
+prompt: 'a picture of '
+
+# optimizer
+weight_decay: 0.05
+min_lr: 0
+max_epoch: 5
+
